@@ -24,7 +24,7 @@ class HangmanGame:
         self.canvas = tk.Canvas(root, width=400, height=400)
         self.canvas.pack()
 
-        self.label_title = tk.Label(root, text="Fruity Hangman Game 🎯", font=("Comic Sans MS", 20))
+        self.label_title = tk.Label(root, text="Fruity Hangman Game", font=("Comic Sans MS", 20))
         self.label_title.pack()
 
         self.draw_base()
@@ -63,10 +63,10 @@ class HangmanGame:
         self.label.config(text=self.get_display_word())
 
         if "_" not in self.get_display_word():
-            self.label.config(text=f"You won! 🎉 The word was '{self.word}'")
+            self.label.config(text=f"You won! The word was '{self.word}'")
 
         if self.wrong_guesses >= 6:
-            self.label.config(text=f"You lost! 😢 The word was '{self.word}'")
+            self.label.config(text=f"You lost! The word was '{self.word}'")
 
     def draw_hangman(self):
         if self.wrong_guesses == 1:
